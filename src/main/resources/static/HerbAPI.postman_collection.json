@@ -1,0 +1,62 @@
+{
+  "info": {
+    "name": "Herb API Collection",
+    "_postman_id": "12345678-90ab-cdef-1234-567890abcdef",
+    "description": "Herbal Encyclopedia API for managing herbs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Herb Names",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/herbs/allherbnames",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "herbs", "allherbnames"]
+        }
+      }
+    },
+    {
+      "name": "Add New Herb",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Neem\",\n  \"subname\": \"Azadirachta indica\",\n  \"image\": \"https://cdn.herbs.com/images/neem.jpg\",\n  \"history\": \"Used in Ayurveda for centuries\",\n  \"pros\": \"Antibacterial, antifungal\",\n  \"cons\": \"Bitter taste, avoid during pregnancy\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/herbs/addherb",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "herbs", "addherb"]
+        }
+      }
+    },
+    {
+      "name": "Slideshow Herbs (Paginated)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/herbs/slideshow?start=0&count=5",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "herbs", "slideshow"],
+          "query": [
+            { "key": "start", "value": "0" },
+            { "key": "count", "value": "5" }
+          ]
+        }
+      }
+    }
+  ]
+}

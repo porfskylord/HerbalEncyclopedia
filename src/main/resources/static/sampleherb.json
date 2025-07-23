@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Gotu Kola",
+    "subname": "Centella asiatica",
+    "image": "https://i.postimg.cc/bJNTRbPF/Gotu-Kola.jpg",
+    "history": "Gotu Kola is widely used in Ayurvedic and traditional Chinese medicine to improve brain function, memory, and wound healing.",
+    "pros": "Enhances memory, reduces anxiety, improves skin healing.",
+    "cons": "May cause dizziness or skin irritation in sensitive individuals."
+  },
+  {
+    "name": "Bhringraj",
+    "subname": "Eclipta alba",
+    "image": "https://i.postimg.cc/d0FnLpxF/Bhringraj.jpg",
+    "history": "Traditionally known as the 'king of herbs' for hair care in Ayurveda.",
+    "pros": "Promotes hair growth, supports liver health, improves skin.",
+    "cons": "May cause chills or increase vata imbalance if taken in excess."
+  },
+  {
+    "name": "Punarnava",
+    "subname": "Boerhavia diffusa",
+    "image": "https://i.postimg.cc/nc63tCKC/Punarnava.jpg",
+    "history": "Used in Ayurveda for kidney support and reducing water retention.",
+    "pros": "Supports kidney health, reduces inflammation, diuretic.",
+    "cons": "May lead to dehydration if not taken with sufficient fluids."
+  },
+  {
+    "name": "Shankhpushpi",
+    "subname": "Convolvulus pluricaulis",
+    "image": "https://i.postimg.cc/Rhhgvtbn/Shankhpushpi.jpg",
+    "history": "A key herb in Ayurveda used to enhance cognitive function and reduce anxiety.",
+    "pros": "Improves memory, relieves stress, supports mental clarity.",
+    "cons": "Mild sedative effect; may cause drowsiness in high doses."
+  }
+]
