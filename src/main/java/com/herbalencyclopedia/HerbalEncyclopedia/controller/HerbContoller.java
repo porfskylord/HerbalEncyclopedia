@@ -1,6 +1,7 @@
 package com.herbalencyclopedia.HerbalEncyclopedia.controller;
 
 import com.herbalencyclopedia.HerbalEncyclopedia.Dto.HerbRequestDto;
+import com.herbalencyclopedia.HerbalEncyclopedia.Dto.AllHerbResponseDto;
 import com.herbalencyclopedia.HerbalEncyclopedia.Dto.HerbResponseDto;
 import com.herbalencyclopedia.HerbalEncyclopedia.service.HerbService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,9 +26,15 @@ public class HerbContoller {
     }
 
     @GetMapping("/allherbnames")
-    public List<HerbResponseDto> allHerbNames() {
+    public List<AllHerbResponseDto> allHerbNames() {
         return herbService.getAllHerbNames();
     }
+
+    @GetMapping("/herb/{id}")
+    public HerbResponseDto getHerb(@PathVariable Long id) {
+        return herbService.getHerb(id);
+    }
+
 
     @PostMapping("/addherb")
     public ResponseEntity<?> addHerb(@RequestBody HerbRequestDto request) {

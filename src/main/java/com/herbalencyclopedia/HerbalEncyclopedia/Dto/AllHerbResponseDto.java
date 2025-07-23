@@ -4,12 +4,7 @@ package com.herbalencyclopedia.HerbalEncyclopedia.Dto;
 @lombok.Builder
 @lombok.NoArgsConstructor
 @lombok.AllArgsConstructor
-public class HerbResponseDto {
+public class AllHerbResponseDto {
     private String id;
     private String name;
-    private String subname;
-    private String image;
-    private String history;
-    private String pros;
-    private String cons;
 }

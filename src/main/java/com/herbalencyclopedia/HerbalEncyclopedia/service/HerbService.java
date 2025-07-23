@@ -1,6 +1,7 @@
 package com.herbalencyclopedia.HerbalEncyclopedia.service;
 
 import com.herbalencyclopedia.HerbalEncyclopedia.Dto.HerbRequestDto;
+import com.herbalencyclopedia.HerbalEncyclopedia.Dto.AllHerbResponseDto;
 import com.herbalencyclopedia.HerbalEncyclopedia.Dto.HerbResponseDto;
 import com.herbalencyclopedia.HerbalEncyclopedia.entity.Herb;
 import com.herbalencyclopedia.HerbalEncyclopedia.repository.HerbRepo;
@@ -25,9 +26,9 @@ public class HerbService {
     @Autowired
     private HerbRepo herbRepo;
 
-    public List<HerbResponseDto> getAllHerbNames() {
+    public List<AllHerbResponseDto> getAllHerbNames() {
         return herbRepo.findAll().stream()
-                .map(Herb -> HerbResponseDto.builder()
+                .map(Herb -> AllHerbResponseDto.builder()
                         .id(String.valueOf(Herb.getId()))
                         .name(Herb.getName())
                         .build())
@@ -117,5 +118,18 @@ public class HerbService {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body("Failed to add Herb: " + ex.getMessage());
         }
+    }
+
+    public HerbResponseDto getHerb(Long id) {
+        Herb herb = herbRepo.findById(id).orElse(null);
+        return HerbResponseDto.builder()
+                .id(String.valueOf(herb.getId()))
+                .name(herb.getName())
+                .subname(herb.getSubname())
+                .image(herb.getImage())
+                .history(herb.getHistory())
+                .pros(herb.getPros())
+                .cons(herb.getCons())
+                .build();
     }
 }
