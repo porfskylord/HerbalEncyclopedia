@@ -2,7 +2,7 @@
 
 A comprehensive digital encyclopedia of medicinal herbs and plants, built with Spring Boot and modern web technologies. This application allows users to explore, search, and manage information about various medicinal plants and their uses.
 
-Website - https://grootherbfrontend.vercel.app/
+Website - https://grootherbfrontend.vercel.app/ - made by Shankar Yadav
 
 ## 🚀 Features
 
